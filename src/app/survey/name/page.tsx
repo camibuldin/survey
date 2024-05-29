@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-import styles from "./survey/styles.module.css";
+import styles from "../styles.module.css";
 
 export default function Page() {
   const router = useRouter();
@@ -14,10 +14,9 @@ export default function Page() {
           <h1>SURVEY</h1>
         </div>
         <div className={styles.body}>
-          <h1>Hello!</h1>
-          <button onClick={() => router.push("/survey/name")} className={styles.nextBtn}>
-            Start journey
-          </button>
+          <p>How do you want us to call you?</p>
+          <input type="text"  className="form-control"/>
+          <button className={styles.nextBtn} onClick={() => router.push("/survey/age")}>Next</button>
         </div>
       </div>
     </>
